@@ -33,13 +33,16 @@ public:
             if (nums1[m-1] >= nums2[n-1]) {
                 nums1[pos] = nums1[m-1];
                 m--;
-                if (m < 0) {
+                if (m == 0) {
+                    for (int g = 0; g < n; g ++) {
+                        nums1[g] = nums2[g];
+                    }
                     break;
                 }
             } else {
                 nums1[pos] = nums2[n-1];
                 n--;
-                if (n < 0) {
+                if (n == 0) {
                     break;
                 }
             }
@@ -54,9 +57,9 @@ public:
 
 int main()
 {
-    vector<int> nums1 = {1};
-    int m = 1;
-    vector<int> nums2 = {};
+    vector<int> nums1 = {1,2,3,0,0,0};
+    int m = 3;
+    vector<int> nums2 = {2,5,6};
     int n = nums2.size();
     
     Solution sol = Solution();
