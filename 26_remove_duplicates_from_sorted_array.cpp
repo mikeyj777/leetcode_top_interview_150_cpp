@@ -14,7 +14,7 @@ public:
         int j = 1;
         auto it = nums.begin();
         while (true){
-            mj_printer(nums);
+            vector_printer(nums);
             if (i >= nums.size()) break;
             j = i + 1;
             if (j >= nums.size()) break;
@@ -25,7 +25,7 @@ public:
             i++;
         }
         cout << "unique values: ";
-        mj_printer(nums);
+        vector_printer(nums);
         return nums.size();
     }
     

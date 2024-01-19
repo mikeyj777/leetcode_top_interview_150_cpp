@@ -1,3 +1,4 @@
+#include <cmath>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -10,9 +11,5 @@ int main()
     
         // cout << a << " " << msg.size();
 
-        for (int i = 0; i < 5 ; i++) {
-            cout << msg[i] << " ";
-        }
-
-    cout << endl;
+        cout << ceil(2.718) << " " << floor(3.14);
 }

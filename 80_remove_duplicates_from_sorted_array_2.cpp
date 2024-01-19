@@ -16,13 +16,13 @@ public:
         auto it = nums.begin();
         int sz = nums.size();
         while (true){
-            mj_printer(nums);
+            vector_printer(nums);
             if (i >= sz) break;
             j = i + 1;
             if (j >= sz) break;
             instance_count = 1;
             while (nums[j] == nums[i]) {
-                mj_printer(nums);
+                vector_printer(nums);
                 instance_count++;
                 if (instance_count > 2) {
                     nums.erase(it + j);
@@ -36,7 +36,7 @@ public:
             i++;
         }
         cout << "final array: ";
-        mj_printer(nums);
+        vector_printer(nums);
         return nums.size();
     }
     
