@@ -12,13 +12,14 @@ public:
     int removeDuplicates(vector<int>& nums) {
         int i = 0;
         int j = 1;
+        auto it = nums.begin();
         while (true){
             mj_printer(nums);
             if (i >= nums.size()) break;
             j = i + 1;
             if (j >= nums.size()) break;
             while (nums[j] == nums[i]) {
-                nums.erase(nums.begin() + j);
+                nums.erase(it + j);
                 if (j >= nums.size()) break;
             }
             i++;
